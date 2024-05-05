@@ -9,6 +9,8 @@ import IconSlider from './components/IconSlider';
 import KontaktaMig from './components/MyProjects';
 import HomePageProdjects from './components/HomePageProdjectsSection/HomePageProdjects';
 import Kontaka from './components/Kontaka';
+import FastingApp from './components/MyProject/FastingApp';
+import FlixTrackr from './components/MyProject/Flixtrackr';
 
 
 
@@ -28,10 +30,18 @@ const HomePage: React.FC = () => {
 
     
 
+    
+
 
 
 
     <KontaktaMig isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+
+    
+
+    <FastingApp isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+    <FlixTrackr isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+
 
     <Kontaka isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
 
