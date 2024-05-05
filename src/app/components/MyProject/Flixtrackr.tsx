@@ -86,11 +86,32 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
             <p className='text-black italic '>
                 {isSwedish ? 'Våran senaset funktion är att lista alla filmer och serier som kommer, via TMDB api kan vi lista alla kommande filmer och serier för våra användare att se   ' : "Our senaset function is to list all upcoming movies and series, via TMDB api we can list all upcoming movies and series for our users to watch"}
             </p>
-            <img
+
+
+         <div className="mt-6 flex  space-x-4">
+  <img
     src="typescript.png"
     alt="Typescript Icon"
-    className="mt-2 w-12 h-12"
+    className="w-12 h-12"
   />
+  <img
+    src="tailwind.png"
+    alt="Tailwind Icon"
+    className="w-16 h-12"
+  />
+  <img
+    src="react.png"
+    alt="react Icon"
+    className="w-12 h-12"
+  />
+  <img
+    src="next.png"
+    alt="next Icon"
+    className="w-13 h-12"
+  />
+</div>
+
+  
             
             
             
@@ -122,7 +143,7 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
         clipRule="evenodd"
       />
     </svg>
-    <span className="text-center">{isSwedish ? 'No Public Github    ' : 'No Public Github'}</span>
+    <span className="text-center">{isSwedish ? 'No Public Github    ' : 'No Public Github    '}</span>
     <svg
       className="ml-2 w-5 h-5 absolute right-2"
       fill="currentColor"

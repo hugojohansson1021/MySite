@@ -9,18 +9,18 @@ const AboutMe: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React
   const textConfig = {
     en: {
       title: 'About Me',
-      title1:'Vem är jag?',
-      description: 'Learn more about our company and our mission.',
-      title2:'Mina intressen',
-      descriptiontwo: 'Learn more about our company and our mission.',
-      title3:'När fick jag intresse för Utveckling?',
-      descriptionttree: 'Eft',
+      title1:'Who am i?',
+      description: 'My name is Hugo Johansson, I am 23 years old and come from a small town in Småland called Tranås, currently I live in Stockholm.',
+      title2:'My interests',
+      descriptiontwo: 'Since I come from the country, my obvious interests are fishing and outdoor life, but I also have a deep interest in development, design and construction of a vision tuill a finished product',
+      title3:'When did I become interested in Development?',
+      descriptionttree: 'I built my first website in html, css and javascript in 2015, and an interest in being able to build something from scratch started, since then I have continued to learn full stack development and both native and hybrid application development.',
       
     },
     sv: {
       title: 'Lite om mig',
       title1:'Vem är jag?',
-      description: 'Mitt namn är Hugo Johansson jag är 23 år gammal och kommer från en liten stad i smålad som heter Tranås, för närvarande bor jag i Stockholm.',
+      description: 'Mitt namn är Hugo Johansson jag är 23 år gammal och kommer från en liten stad i småland som heter Tranås, för närvarande bor jag i Stockholm.',
       title2:'Mina intressen',
       descriptiontwo: 'Eftersom jag kommer från landet så är mina självklara intressen fiska och fridluftliv, men jag har också ett djupt intresse för utveckling, design och byggnation av en vision tuill en färedig  product  ',
       title3:'När fick jag intresse för Utveckling?',
@@ -32,6 +32,7 @@ const AboutMe: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React
     <section className=" bg-transparent py-2 px-4 sm:px-6 lg:px-8 rounded-3xl mt-20">
 
       <motion.h2
+          id='whoami'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}

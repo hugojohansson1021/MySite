@@ -22,7 +22,7 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
     },
     sv: {
       title: 'Mina Projekt',
-      description: 'Se alla projekt och IP:s som jag byggt under åren',
+      description: 'Se alla projekt och IP:s som jag byggt',
       arrowlink: 'Mina Projekt',
 
       title1: 'Min Github',
@@ -62,7 +62,7 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
   
 <div className="mt-6 items-center justify-center text-center">
   <motion.a
-    href="/projects"
+    href="#fastigapp"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}

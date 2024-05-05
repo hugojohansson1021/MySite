@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
     const textConfig = {
         en: {
-          title: 'Welcome to my site..!',
+          title: 'Contact Me ',
           description: 'Here you can find information about who I am and what I like as well as my projects and interests',
           descriptiontwo: 'You can also chat with an AI bot I built that has information about who I am and what I did earlier in my life and so on',
         },
         sv: {
-          title: 'Välkommen till min sida..!', 
+          title: 'Kontakta mig', 
           description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen',
           descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv',
         },
@@ -20,6 +20,7 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
     <section className=" bg-transparent py-12 px-4 sm:px-6 lg:px-8 rounded-3xl mt-32">
 
            <motion.h2
+           id='contactme'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}
@@ -54,7 +55,7 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
 
             
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center mt-32">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,13 +63,10 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
               viewport={{ once: true }}
               className="bg-white rounded-3xl shadow-lg p-4 w-96 max-w-md"
             >
-              <h3 className="text-2xl font-bold text-black mb-4">
+              <h3 className="text-3xl font-bold text-black mb-4">
                 {isSwedish ? textConfig.sv.title : textConfig.en.title}
               </h3>
-              <p className="text-gray-700 mb-2">
-                {isSwedish ? textConfig.sv.description : textConfig.en.description}
-              </p>
-
+              
 
 <div className="mt-6 items-center justify-center text-center">
   <motion.a

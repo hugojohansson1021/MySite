@@ -51,9 +51,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI', botA
     }
   };
 
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  
 
   return (
     

@@ -25,17 +25,10 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
     <section className=" bg-transparent py-12 px-4 sm:px-6 lg:px-8 rounded-3xl mt-32">
 
 
-<motion.h2
-           initial={{ opacity: 0, y: 50 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.6 }}
-           viewport={{ once: true }}
-           className=  "text-4xl text-center font-bold mb-9 bg-gradient-to-r from-emerald-500 to-white bg-clip-text text-transparent underline decoration-emerald-400  "
-            >
-            {isSwedish ? 'Mina Projekt' : 'My Projects'}
-            </motion.h2>
+
 
            <motion.h2
+           id='fastigapp'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}

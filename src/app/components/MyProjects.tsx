@@ -13,6 +13,7 @@ const KontaktaMig: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<R
   return (
     <section className=" bg-transparent py-2 px-4 sm:px-6 lg:px-8 rounded-3xl mt-20">
       <motion.h2
+           id='myprods'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}
@@ -30,7 +31,7 @@ const KontaktaMig: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<R
            viewport={{ once: true }}
            className=  "text-ml text-center mb-3 italic "
             >
-            {isSwedish ? 'Jag har byggt en AI, och laddat upp biografi om mig själv' : ' I have built an AI, and i have given it a biography of myself '}
+            {isSwedish ? 'Jag har byggt en AI som har information om mig' : ' I have built an AI, and i have given it a biography of myself '}
             </motion.h2>
             
       <div className="max-w-7xl mx-auto">

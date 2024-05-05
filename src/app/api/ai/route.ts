@@ -6,7 +6,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPEN_AI_KEY,
 });
 
-const assistantId = 'asst_lB0ihEXO2fcThKQsBJbwi7Tn';
+const assistantId = 'asst_cQmrWFPKEZX2nFVHJWejPgaR';
 
 export async function POST(req: NextRequest) {
   if (!req.body) {

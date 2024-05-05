@@ -7,17 +7,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleLinkClick = useCallback(() => {
+  const handleLinkClick = useCallback((id: string) => {
     setIsMenuOpen(false);
+    const targetElement = document.getElementById(id);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }, []);
 
-  const debounce = (func: () => void, delay: number) => {
+  const debounce = (func: (id: string) => void, delay: number) => {
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
-    return () => {
+    return (id: string) => {
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
-      timeoutId = setTimeout(func, delay);
+      timeoutId = setTimeout(() => func(id), delay);
     };
   };
 
@@ -63,9 +67,9 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
           <div className={`absolute md:relative top-full left-0 right-0 md:top-auto mt-4 md:mt-0 ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center md:flex md:flex-row`}>
             <div className="absolute top-0 left-0 w-full h-full bg-gray-600 bg-opacity-90 backdrop-blur-lg md:hidden rounded-2xl"></div>
             <ul className="relative w-full text-center md:flex md:flex-row md:space-x-4 ">
-              <Link href="/#" onClick={(event) => {
+              <Link href="#" onClick={(event) => {
                 event.stopPropagation();
-                debouncedHandleLinkClick();
+                debouncedHandleLinkClick('');
               }}>
                 <li className=" rounded-full text-white text-xl text-bold px-4 py-2  cursor-pointer hover:underline decoration-teal-400 md:decoration-teal-400">
                   {isSwedish ? textConfig.sv.descriptionone : textConfig.en.descriptionone}
@@ -73,7 +77,7 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
               </Link>
               <Link href="#" onClick={(event) => {
                 event.stopPropagation();
-                debouncedHandleLinkClick();
+                debouncedHandleLinkClick('whoami');
               }}>
                 <li className="rounded-full text-white text-xl text-bold px-4 py-2 cursor-pointer hover:underline decoration-teal-400 md:decoration-teal-400">
                   {isSwedish ? textConfig.sv.descriptiontwo : textConfig.en.descriptiontwo}
@@ -81,7 +85,7 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
               </Link>
               <Link href="#" onClick={(event) => {
                 event.stopPropagation();
-                debouncedHandleLinkClick();
+                debouncedHandleLinkClick('myprods');
               }}>
                 <li className="rounded-full text-white text-xl text-bold px-4 py-2 cursor-pointer hover:underline decoration-teal-400 md:decoration-teal-400">
                   {isSwedish ? textConfig.sv.descriptiontree : textConfig.en.descriptiontree}
@@ -89,7 +93,7 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
               </Link>
               <Link href="#" onClick={(event) => {
                 event.stopPropagation();
-                debouncedHandleLinkClick();
+                debouncedHandleLinkClick('contactme');
               }}>
                 <li className="rounded-full text-white text-xl text-bold px-4 py-2 cursor-pointer hover:underline decoration-teal-400 md:decoration-teal-400">
                   {isSwedish ? textConfig.sv.descriptionfour : textConfig.en.descriptionfour}
@@ -111,7 +115,6 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
               </label>
               <span className={`text-white blur-none ${!isSwedish ? 'font-bold blur-none green-color' : ''}`}>EN</span>
             </div>
-            
           </div>
         </div>
       </nav>

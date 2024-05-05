@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const textConfig = {
     en: {
-      title: 'Welcome to my site..!',
+      title: 'Welcome..!',
       description: 'Here you can find information about who I am and what I like as well as my projects and interests',
-      descriptiontwo: 'You can also chat with an AI bot I built that has information about who I am and what I did earlier in my life and so on',
+      descriptiontwo: 'You can also chat with an AI bot I built that has information about who I am and what I did earlier in my life and so on.',
     },
     sv: {
-      title: 'Välkommen till min sida..!', 
-      description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen',
-      descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv',
+      title: 'Välkommen..!', 
+      description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen,',
+      descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv.',
     },
   };
 
@@ -39,12 +39,13 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
             >
               {isSwedish ? textConfig.sv.description : textConfig.en.description}
               <br />
+              <br />
               {isSwedish ? textConfig.sv.descriptiontwo : textConfig.en.descriptiontwo}
             </motion.h3>
           
           
             <motion.a
-            href="/#"
+            href="#myprods"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
