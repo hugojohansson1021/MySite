@@ -21,10 +21,26 @@ const KontaktaMig: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<R
             >
             {isSwedish ? 'Mina Projekt' : 'My Projects '}
             </motion.h2>
+
+
+            <motion.h2
+           initial={{ opacity: 0, y: 50 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6 }}
+           viewport={{ once: true }}
+           className=  "text-ml text-center mb-3 italic "
+            >
+            {isSwedish ? 'Jag har byggt en AI, och laddat upp biografi om mig själv' : ' I have built an AI, and i have given it a biography of myself '}
+            </motion.h2>
+            
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+
+
+          
         
-              <Chatbot apiEndpoint="/api/ai" />
+          <Chatbot apiEndpoint="/api/ai" />
             
           
 

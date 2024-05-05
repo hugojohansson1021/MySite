@@ -3,20 +3,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
-  const textConfig = {
-    en: {
-      title: <p>Do you want to contact me?</p>,
-      description: <p>If you have any questions that my Ai can't answer you are welcome to <a className='underline decoration-teal-500'>contact me directly down below:</a></p>,
-      
-      
-    },
-    sv: {
-      title: <p>Vill du kontakta mig?</p>, 
-      description: <p>Har du några frågor kan du antigen fråga min Ai eller <a className='underline decoration-teal-500'>kontakta mig direkt här:</a> </p>,
-      
-      
-    },
-  };
+    const textConfig = {
+        en: {
+          title: 'Welcome to my site..!',
+          description: 'Here you can find information about who I am and what I like as well as my projects and interests',
+          descriptiontwo: 'You can also chat with an AI bot I built that has information about who I am and what I did earlier in my life and so on',
+        },
+        sv: {
+          title: 'Välkommen till min sida..!', 
+          description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen',
+          descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv',
+        },
+      };
 
   return (
     <section className=" bg-transparent py-12 px-4 sm:px-6 lg:px-8 rounded-3xl mt-32">

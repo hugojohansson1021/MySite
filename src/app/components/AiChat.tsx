@@ -13,7 +13,9 @@ interface Message {
 
 const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI', botAvatarSrc = '/MyFace.png' }) => {
   const [question, setQuestion] = useState<string>('');
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    { type: 'response', text: 'Har du några frågor är det bara att fråga på?' },
+  ]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -54,17 +56,30 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI', botA
   }, [messages]);
 
   return (
+    
     <div style={{ fontFamily: 'Arial, sans-serif', width: '89vw', maxWidth: '500px', margin: 'auto', border: '1px solid #000000', borderRadius: '10px', overflow: 'hidden' }}>
       <div style={{ padding: '10px', backgroundColor: '#76FFBF', borderBottom: '1px solid #ddd', textAlign: 'center' }}>
         <h1 style={{ alignSelf: 'center', color: 'black' }}>{botName}</h1>
       </div>
       <div style={{ height: '500px', overflowY: 'auto', padding: '10px', display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: '#fff' }}>
         {messages.map((message, index) => (
-          <div key={index} style={{ alignSelf: message.type === 'question' ? 'flex-end' : 'flex-start', backgroundColor: message.type === 'question' ? '#76FFBF' : '#76FFBF', borderRadius: '10px', padding: '10px', maxWidth: '80%', display: 'flex', alignItems: 'center' }}>
+          <div key={index} style={{ alignSelf: message.type === 'question' ? 'flex-end' : 'flex-start', backgroundColor: message.type === 'question' ? '#76FFBF' : '#76FFBF', borderRadius: '10px', padding: '10px', maxWidth: '80%', display: 'flex', alignItems: 'center', position: 'relative' }}>
             {message.type === 'response' && (
               <img src={botAvatarSrc} alt="Bot Avatar" style={{ width: '30px', height: '30px', borderRadius: '50%', marginRight: '10px' }} />
             )}
             <p style={{ margin: 0, color: 'black' }}>{message.text}</p>
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '-5px',
+                left: message.type === 'question' ? 'auto' : '10px',
+                right: message.type === 'question' ? '10px' : 'auto',
+                width: '10px',
+                height: '10px',
+                backgroundColor: '#76FFBF',
+                transform: message.type === 'question' ? 'rotate(45deg)' : 'rotate(-45deg)',
+              }}
+            />
           </div>
         ))}
         <div ref={bottomRef} />
@@ -74,7 +89,6 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI', botA
               <div></div>
               <div></div>
               <div></div>
-              
             </div>
           </div>
         )}

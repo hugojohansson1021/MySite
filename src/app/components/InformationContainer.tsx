@@ -1,18 +1,18 @@
-// InformationContainer.tsx
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const textConfig = {
     en: {
-      title: <meta>Welcome to my site..!</meta>,
-      description: <p>Here you can find information about who I am and what I like as well as my projects and interests </p>,
-      descriptiontwo: <p>You can also <a className='underline decoration-indigo-500'>chat with an AI bot </a> I built that has information about who I am and what I did earlier in my life and so on</p>,
+      title: 'Welcome to my site..!',
+      description: 'Here you can find information about who I am and what I like as well as my projects and interests',
+      descriptiontwo: 'You can also chat with an AI bot I built that has information about who I am and what I did earlier in my life and so on',
     },
     sv: {
-      title: <p>Välkommen till min sida..!</p>, 
-      description: <p>Här kan du hitta information om <a className='underline decoration-teal-500'>vem jag är</a> och vad jag tycker om samt mina <a className='underline decoration-teal-500'>projekt</a> och <a className='underline decoration-teal-500'>intressen</a> </p>,
-      descriptiontwo: <p>Du kan även <a className='underline decoration-indigo-500'>chatta med en AI bot </a> jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv</p>,
+      title: 'Välkommen till min sida..!', 
+      description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen',
+      descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv',
     },
   };
 

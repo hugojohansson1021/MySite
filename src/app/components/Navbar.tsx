@@ -45,7 +45,7 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
           {/* New container for site title and hamburger menu */}
           <div className="flex justify-between items-center w-full md:w-auto mr-3">
             <Link href="/" className="text-3xl font-bold text-center z-10 green-color py-2 px-4 rounded-full ">
-              App Utvecklare
+              Hugo Johansson
             </Link>
 
             {/* Uppdaterad klickbar område för hamburgerikon */}
