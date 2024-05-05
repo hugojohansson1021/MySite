@@ -31,3 +31,254 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes suck {
+    0% {
+      transform: translateX(0) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100px) translateY(-100px);
+      opacity: 0;
+    }
+  }
+
+.green-color{
+color: #76FFBF;
+}
+.italic{
+font-style: italic;
+}
+
+
+
+
+
+
+
+.navbar_toggle .bar {
+display: block;
+width: 30px; 
+height: 3px; 
+background-color: #000; 
+margin: 6px 0; 
+}
+
+
+
+.header {
+background: #333;
+color: white;
+padding: 1rem;
+text-align: center;
+}
+
+.nav ul {
+list-style: none;
+padding: 0;
+display: flex;
+justify-content: center;
+background: #f0f0f0;
+}
+
+.nav li {
+margin: 0 1rem;
+}
+
+.nav a {
+text-decoration: none;
+color: #333;
+}
+
+
+.horizontal-menu {
+  display: flex; /* Aktiverar flexbox-layout */
+  flex-direction: column; /* Staplar barnen vertikalt */
+  padding: 0; /* Tar bort default padding */
+  list-style: none; /* Tar bort list-markeringar */
+}
+
+.bar {
+  display: block;
+  cursor: pointer;
+}
+
+/* Stiländringar när menyn är öppen */
+.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar_toggle {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+}
+
+
+
+
+
+.black-gradient-container {
+  width: full;
+  height: full;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-gradient-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(25, 25, 25) 0%,
+    rgb(30, 30, 30) 10%,
+    rgb(55, 55, 55) 20%,
+    rgb(60, 60, 60) 30%,
+    rgb(70, 70, 70) 40%,
+    rgb(80, 80, 80) 50%,
+    rgb(70, 70, 70) 60%,
+    rgb(60, 60, 60) 70%,
+    rgb(55, 55, 55) 80%,
+    rgb(30, 30, 30) 90%,
+    rgb(25, 25, 25) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+
+/* Laddnings animation Hgo GPT */
+.dot-flashing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.dot-flashing div {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #000;
+  animation: dot-flashing 1s infinite linear alternate;
+}
+
+.dot-flashing div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot-flashing div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot-flashing div:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #000;
+  }
+  50%, 100% {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@layer utilities {
+
+  .chatbotcss{
+    margin-left: 5px;
+  }
+
+
+
+  .section-text {
+    font-size: 14px; /* text-sm */
+    overflow: hidden; /* overflow-hidden */
+    text-overflow: ellipsis; /* overflow-ellipsis */
+    white-space: nowrap; /* För att säkerställa att ellipsis fungerar */
+    display: block; /* block */
+}
+
+@media (min-width: 768px) { /* Tailwind's standard breakpoint för 'md:' */
+    .chat-container-small{
+      width: 350px;
+    }
+}
+  
+}
+
+
+
+
+
+
+
+/* IconSlider */
+
+.icon-slider {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.icon-container {
+  display: flex;
+  animation: slide infinite 54s linear; /* Adjust timing for smoother transition */
+  min-width: 400%; /* Larger width for continuous flow */
+}
+
+.icon-item {
+  flex: 0 0 auto;
+  width: 100px; /* Define width for each icon */
+  margin-right: 128px; /* Space between icons */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Adjust depending on total width of icons visible */
+  }
+}
+
+

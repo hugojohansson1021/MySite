@@ -1,0 +1,12 @@
+remove caching 
+
+rm -rf .next/
+npm run build
+
+
+npm update next
+
+
+rm -rf node_modules
+rm package-lock.json # eller yarn.lock om du använder Yarn
+npm install # eller yarn install om du använder Yarn
