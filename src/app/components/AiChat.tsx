@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
+/* eslint-disable react/no-unescaped-entities */
 
 interface ChatbotProps {
   apiEndpoint: string;

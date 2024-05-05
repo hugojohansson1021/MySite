@@ -3,6 +3,7 @@ import { FaNodeJs, FaReact, FaAngular, FaVuejs, FaHtml5, FaCss3Alt, FaJs, FaData
 import { SiTypescript, SiMongodb } from 'react-icons/si';
 import VercelIcon from './VercelIcon';  // Assuming you've saved this component
 import NextIcon from './NextIcon';    // Assuming you've saved this component
+/* eslint-disable react/no-unescaped-entities */
 
 const IconSlider: React.FC = () => {
   // Create an array of icons

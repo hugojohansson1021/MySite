@@ -5,6 +5,7 @@ import FourColumnContainer from './FourColumnContainer';
 import ThreeColumnContainer from './FourColumnContainer';
 import Chatbot from './AiChat';
 import TwoColumnContainer from './TwoColumnContainer';
+/* eslint-disable react/no-unescaped-entities */
 
 
 const KontaktaMig: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReusableButton from '../../ReusableButtonProps'; // Ersätt med korrekt sökväg
 
+/* eslint-disable react/no-unescaped-entities */
+
 interface MyComponentProps {
     titleText: string;   // Texten för h1-tagg
     imgSrc: string;      // Bildkälla för img-tagg

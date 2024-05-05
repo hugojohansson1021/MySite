@@ -7,10 +7,10 @@ import InformationContainer from './components/InformationContainer';
 import AboutMe from './components/AboutMe';
 import IconSlider from './components/IconSlider';
 import KontaktaMig from './components/MyProjects';
-import HomePageProdjects from './components/HomePageProdjectsSection/HomePageProdjects';
 import Kontaka from './components/Kontaka';
 import FastingApp from './components/MyProject/FastingApp';
 import FlixTrackr from './components/MyProject/Flixtrackr';
+/* eslint-disable react/no-unescaped-entities */
 
 
 

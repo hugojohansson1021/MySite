@@ -1,6 +1,7 @@
 // ThreeColumnContainer.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
+/* eslint-disable react/no-unescaped-entities */
 
 const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const textConfig = {

@@ -1,5 +1,6 @@
 // NextIcon.js
 import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
 
 const NextIcon = ({ size = 50, color = '#000000' }) => (
   <svg width={size} height={size} viewBox="0 0 256 297" fill="none" xmlns="http://www.w3.org/2000/svg">

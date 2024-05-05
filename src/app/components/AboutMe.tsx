@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import FourColumnContainer from './FourColumnContainer';
 import ThreeColumnContainer from './FourColumnContainer';
+/* eslint-disable react/no-unescaped-entities */
 
 
 const AboutMe: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {

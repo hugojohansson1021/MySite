@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ProdjectCardOne from './ProjectCards/ProdjectCardOne';
 import { motion } from 'framer-motion';
-
+/* eslint-disable react/no-unescaped-entities */
 const HomePageProdjects: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
