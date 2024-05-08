@@ -86,7 +86,7 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
             </p>
             <br />
             <img
-    src="swift.png"
+    src="Swift.png"
     alt="Swift Icon"
     className="mt-2 w-16 h-12"
   />
