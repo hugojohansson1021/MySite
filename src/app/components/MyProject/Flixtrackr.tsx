@@ -89,7 +89,7 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
             </p>
 
 
-         <div className="mt-6 flex  space-x-4">
+         <div className="mt-6 flex flex-wrap justify-start space-x-4">
   <img
     src="typescript.png"
     alt="Typescript Icon"
@@ -107,6 +107,21 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
   />
   <img
     src="next.png"
+    alt="next Icon"
+    className="w-13 h-12"
+  />
+  <img
+    src="googleana.png"
+    alt="next Icon"
+    className="w-13 h-12"
+  />
+  <img
+    src="mongo.png"
+    alt="mongo Icon"
+    className="w-13 h-12"
+  />
+  <img
+    src="discord.png"
     alt="next Icon"
     className="w-13 h-12"
   />

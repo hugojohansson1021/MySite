@@ -109,7 +109,7 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
           </div>
 
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -124,13 +124,13 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
                 {isSwedish ? textConfig.sv.description2 : textConfig.en.description2}
               </p>
               <a
-  href="/path/to/your/file.pdf"
+  href="/CV.pdf"
   download
-  className="green-color flex items-center"
+  className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center "
 >
   <span>{isSwedish ? textConfig.sv.arrowlink2 : textConfig.en.arrowlink2}</span>
   <svg
-    className="ml-2 w-4 h-4"
+    className="ml-2 w-6 h-6 mt-0.5"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"

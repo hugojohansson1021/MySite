@@ -12,7 +12,7 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
     },
     sv: {
       title: 'Välkommen..!', 
-      description: 'Här kan du hitta information om vem jag är och vad jag tycker om samt mina projekt och intressen,',
+      description: 'Här kan du hitta information om vem jag är samt mina projekt och intressen,',
       descriptiontwo: 'Du kan även chatta med en AI bot jag byggt som har information om vem jag är och vad jag gjort tidigare i mitt liv.',
     },
   };

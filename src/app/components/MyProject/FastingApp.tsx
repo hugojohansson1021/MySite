@@ -85,12 +85,25 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
                 {isSwedish ? 'Jag byggde denna app då jag tyckte att hälso/tränings apparna som finns på marknaden är för focuserade på features och mindre focuserade på användare vänligheten, denna app har användare vänligheten i focus' : 'I built this app because I thought that the health/training apps on the market are too focused on features and less focused on user friendliness, this app has user friendliness in focus'}
             </p>
             <br />
-            <img
-    src="Swift.png"
-    alt="Swift Icon"
-    className="mt-2 w-16 h-12"
+            <div className="mt-6 flex flex-wrap justify-start space-x-4">
+  <img
+    src="swifter.png"
+    alt="swift iocon Icon"
+    className="w-12 h-12"
   />
-            
+  <img
+    src="firebase.png"
+    alt="Firebase Icon"
+    className="w-12 h-12"
+  />
+  <img
+    src="googleana.png"
+    alt="react Icon"
+    className="w-12 h-12"
+  />
+  
+</div>
+        
               
 
               
