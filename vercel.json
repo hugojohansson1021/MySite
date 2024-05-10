@@ -1,10 +1,8 @@
 {
     "functions": {
-      "src/app/api/ai/route.ts": {
+      "api/ai/route.ts": {
         "maxDuration": 30
       }
-    },
-    "build": {
-      "timeout": 30
     }
   }
+  
