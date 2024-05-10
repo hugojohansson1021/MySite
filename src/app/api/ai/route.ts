@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 const assistantId = 'asst_cQmrWFPKEZX2nFVHJWejPgaR';
 
-export const maxDuration = 300;
+export const maxDuration = 50;
 
 export async function POST(req: NextRequest) {
   if (!req.body) {
