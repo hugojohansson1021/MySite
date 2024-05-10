@@ -3,6 +3,9 @@
       "src/app/api/ai/route.js": {
         "maxDuration": 30
       }
+    },
+    "build": {
+      "timeout": 30
     }
   }
   
