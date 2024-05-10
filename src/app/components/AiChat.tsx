@@ -12,10 +12,10 @@ interface Message {
   text: string;
 }
 
-const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI', botAvatarSrc = '/MyFace.png' }) => {
+const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assistent', botAvatarSrc = '/MyFace.png' }) => {
   const [question, setQuestion] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([
-    { type: 'response', text: 'Har du några frågor är det bara att fråga på?' },
+    { type: 'response', text: 'Har du några frågor om Hugo? det är bara att fråga på?' },
   ]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
