@@ -9,8 +9,8 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
 
     const images = [
         { src: "kotlinApp.png", alt: "Profil img 1" },
-        { src: "kotlinApp.png", alt: "Profil img 2" },
-        { src: "kotlinApp.png", alt: "Profil img 3" },
+        { src: "kotlinApp2.png", alt: "Profil img 2" },
+        { src: "kotlinApp3.png", alt: "Profil img 3" },
       ];
     
       const [activeIndex, setActiveIndex] = useState(0);
@@ -87,20 +87,11 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
             <br />
             <div className="mt-6 flex flex-wrap justify-start space-x-4">
   <img
-    src="swifter.png"
-    alt="swift iocon Icon"
+    src="kotlinIcon.png"
+    alt="kotlin iocon Icon"
     className="w-12 h-12"
   />
-  <img
-    src="firebase.png"
-    alt="Firebase Icon"
-    className="w-12 h-12"
-  />
-  <img
-    src="googleana.png"
-    alt="react Icon"
-    className="w-12 h-12"
-  />
+  
   
 </div>
         
