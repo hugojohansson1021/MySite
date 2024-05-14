@@ -74,7 +74,7 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
               className="bg-white rounded-3xl shadow-lg p-4 w-full mt-28"
             >
               <h3 className="text-2xl font-bold text-black mb-4">
-               {isSwedish ? 'Biofast app' : 'Biofast app'}
+               {isSwedish ? 'FakeFlix App' : 'FakeFlix App'}
               </h3>
 
             <p className='text-black italic '>
@@ -82,7 +82,7 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
             </p>
             <br />
             <p className='text-black italic '>
-                {isSwedish ? 'Detta project byggde jag för att testa en ny IDE och byggnation av en native android app, ' : 'I built this app because I thought that the health/training apps on the market are too focused on features and less focused on user friendliness, this app has user friendliness in focus'}
+                {isSwedish ? 'Detta projekt byggde jag för att testa en ny IDE och byggnation av en native android app, jag testade också på hur det funkar med api requests och core databas hanteriung' : 'I built this project to test a new IDE and build a native android app, I also tested how it works with api requests and core database handling'}
             </p>
             <br />
             <div className="mt-6 flex flex-wrap justify-start space-x-4">
