@@ -8,9 +8,9 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
 
 
     const images = [
-        { src: "mainscreen.png", alt: "Profil img 1" },
-        { src: "mainscreen.png", alt: "Profil img 2" },
-        { src: "mainscreen.png", alt: "Profil img 3" },
+        { src: "kotlinApp.png", alt: "Profil img 1" },
+        { src: "kotlinApp.png", alt: "Profil img 2" },
+        { src: "kotlinApp.png", alt: "Profil img 3" },
       ];
     
       const [activeIndex, setActiveIndex] = useState(0);
@@ -29,14 +29,14 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
 
 
            <motion.h2
-           id='fastigapp'
+           id='kotlinapp'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}
            viewport={{ once: true }}
            className=  "text-3xl text-center font-bold mb-3 bg-gradient-to-r from-emerald-500 to-white bg-clip-text text-transparent   "
             >
-            {isSwedish ? 'Fasting App' : 'Fasting App'}
+            {isSwedish ? 'Kotlin App' : 'Kotlin App'}
             </motion.h2>
         
 
@@ -78,11 +78,11 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
               </h3>
 
             <p className='text-black italic '>
-                {isSwedish ? 'Detta är en nativ Fastnings app byggd i Xcode Swift Ui, Jag byggde denna då jag själv håller mig på intermittent fasting för hälsoskälen, ' : 'This is a native Fasting app built in Xcode Swift Ui, I built this as I myself am on intermittent fasting for health reasons'}
+                {isSwedish ? 'Detta är en native Android app byggd i kotlin, Under detta project testade jag bygga i Android Studio' : 'This is a native Android app built in Kotlin, During this project I tested building in Android Studio'}
             </p>
             <br />
             <p className='text-black italic '>
-                {isSwedish ? 'Jag byggde denna app då jag tyckte att hälso/tränings apparna som finns på marknaden är för focuserade på features och mindre focuserade på användare vänligheten, denna app har användare vänligheten i focus' : 'I built this app because I thought that the health/training apps on the market are too focused on features and less focused on user friendliness, this app has user friendliness in focus'}
+                {isSwedish ? 'Detta project byggde jag för att testa en ny IDE och byggnation av en native android app, ' : 'I built this app because I thought that the health/training apps on the market are too focused on features and less focused on user friendliness, this app has user friendliness in focus'}
             </p>
             <br />
             <div className="mt-6 flex flex-wrap justify-start space-x-4">
@@ -113,7 +113,7 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
             <div className="mt-6 ">
                 
   <motion.a
-    href={`https://github.com/carlhugojohansson`}
+    href={`https://github.com/hugojohansson1021/STI_AndroidUTV_ProjektARB`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
