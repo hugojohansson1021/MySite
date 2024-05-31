@@ -12,6 +12,7 @@ import FastingApp from './components/MyProject/FastingApp';
 import FlixTrackr from './components/MyProject/Flixtrackr';
 import Fakeflix from './components/MyProject/Fakeflix';
 import Journalkollen from './components/MyProject/Journalkollen';
+import Googleads from './components/MyProject/Googleads';
 /* eslint-disable react/no-unescaped-entities */
 
 
@@ -45,6 +46,7 @@ const HomePage: React.FC = () => {
     <FlixTrackr isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <Fakeflix isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <Journalkollen isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+    <Googleads isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
 
 
     <Kontaka isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
