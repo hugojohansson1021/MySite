@@ -3,14 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 /* eslint-disable react/no-unescaped-entities */
 
-const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
+const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
     
-
-
     const images = [
-        { src: "mainscreen.png", alt: "Profil img 1" },
-        { src: "mainscreen.png", alt: "Profil img 2" },
-        { src: "mainscreen.png", alt: "Profil img 3" },
+        { src: "Journalkollen.png", alt: "Profil img 1" },
+        { src: "Journalkollen_2.png", alt: "Profil img 2" },
+        { src: "Journalkollen_3.png", alt: "Profil img 3" },
       ];
     
       const [activeIndex, setActiveIndex] = useState(0);
@@ -18,25 +16,26 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
       useEffect(() => {
         const interval = setInterval(() => {
           setActiveIndex((current) => (current === images.length - 1 ? 0 : current + 1));
-        }, 4000); // Change image every 3000 milliseconds (3 seconds)
+        }, 4000); 
         return () => clearInterval(interval);
       }, []);
 
+
+    
+
+
+
   return (
-    <section className=" bg-transparent py-12 px-4 sm:px-6 lg:px-8 rounded-3xl mt-32">
-
-
-
+    <section className=" bg-transparent py-12 px-4 sm:px-6 lg:px-8 rounded-3xl mt-2">
 
            <motion.h2
-           id='fastigapp'
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.6 }}
            viewport={{ once: true }}
-           className=  "text-3xl text-center font-bold mb-3 bg-gradient-to-r from-emerald-500 to-white bg-clip-text text-transparent   "
+           className=  "text-3xl text-center font-bold mb-3 bg-gradient-to-r from-emerald-500 to-white bg-clip-text text-transparent  "
             >
-            {isSwedish ? 'Fasting App' : 'Fasting App'}
+            {isSwedish ? 'Flixtrackr.com' : 'Flixtrackr.com'}
             </motion.h2>
         
 
@@ -74,51 +73,72 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
               className="bg-white rounded-3xl shadow-lg p-4 w-full mt-28"
             >
               <h3 className="text-2xl font-bold text-black mb-4">
-               {isSwedish ? 'Biofast app' : 'Biofast app'}
+               {isSwedish ? 'Journalkollen' : 'Journalkollen'}
               </h3>
 
             <p className='text-black italic '>
-                {isSwedish ? 'Detta är en nativ Fastnings app byggd i Xcode Swift Ui, Jag byggde denna då jag själv håller mig på intermittent fasting för hälsoskälen, ' : 'This is a native Fasting app built in Xcode Swift Ui, I built this as I myself am on intermittent fasting for health reasons'}
+                {isSwedish ? 'Journalkollen är ett projekt som jag startade efter att fått läkarsvar som var nästan helt omöjliga att förstå, akronymer och förkortningar som enbart läkare kunnde förstå hjälpte inte mig som patient ' : "Journalkollen is a project that I started after receiving doctors' answers that were almost completely impossible to understand, acronyms and abbreviations that only doctors could understand did not help me as a patient"}
             </p>
             <br />
             <p className='text-black italic '>
-                {isSwedish ? 'Jag byggde denna app då jag tyckte att hälso/tränings apparna som finns på marknaden är för focuserade på features och mindre focuserade på användare vänligheten, denna app har användare vänligheten i focus' : 'I built this app because I thought that the health/training apps on the market are too focused on features and less focused on user friendliness, this app has user friendliness in focus'}
+                {isSwedish ? 'Så jag tänkte att jag kan utveckla ett AI verktyg som översätter alla medicin tekniska akronymer och kan ge en enkel förklaring till användaren vad svaren betyder ' : "So I thought I can develop an ai tool that translates all medical technical acronyms and can give a simple explanation to the user what the answers mean"}
             </p>
-            <br />
-            <div className="mt-6 flex flex-wrap justify-start space-x-4">
+            
+
+
+         <div className="mt-6 flex flex-wrap justify-start space-x-4">
   <img
-    src="swifter.png"
-    alt="swift iocon Icon"
+    src="typescript.png"
+    alt="Typescript Icon"
     className="w-12 h-12"
   />
   <img
-    src="firebase.png"
-    alt="Firebase Icon"
-    className="w-12 h-12"
+    src="tailwind.png"
+    alt="Tailwind Icon"
+    className="w-16 h-12"
   />
   <img
-    src="googleana.png"
+    src="react.png"
     alt="react Icon"
     className="w-12 h-12"
   />
+  <img
+    src="next.png"
+    alt="next Icon"
+    className="w-13 h-12"
+  />
+  <img
+    src="googleana.png"
+    alt="next Icon"
+    className="w-13 h-12"
+  />
+  <img
+    src="Swish-icon.png"
+    alt="mongo Icon"
+    className="w-13 h-12"
+  />
   
 </div>
-        
+
+  
+            
+            
+            
               
 
               
               
+
 
 
             <div className="mt-6 ">
-                
   <motion.a
     href={`https://github.com/carlhugojohansson`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
-    className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+    className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center relative"
   >
     <svg
       className="mr-2 w-4 h-4"
@@ -132,27 +152,29 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
         clipRule="evenodd"
       />
     </svg>
-    <span className="text-center">{isSwedish ? 'Github' : 'Github'}</span>
+    <span className="text-center">{isSwedish ? 'No Public Github    ' : 'No Public Github    '}</span>
+    <svg
+      className="ml-2 w-5 h-5 absolute right-2"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        d="M12 1a5 5 0 00-5 5v2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V10a2 2 0 00-2-2h-2V6a5 5 0 00-5-5zm-3 8V6a3 3 0 116 0v3H9z"
+        clipRule="evenodd"
+      />
+    </svg>
   </motion.a>
-  
 </div>
 
 
-<div className="mt-6 ">
-                
-  <motion.a
-    href={`https://www.biofastapp.com/`}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay: 0.4 }}
-    viewport={{ once: true }}
-    className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
-  >
 
-    <span className="text-center">{isSwedish ? 'Webbsite' : 'Webbsite'}</span>
-  </motion.a>
-  
-</div>
+
+
+
+
+
 
 
 
@@ -168,4 +190,4 @@ const FastingApp: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
   );
 };
 
-export default FastingApp;
+export default FlixTrackr;

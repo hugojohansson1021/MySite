@@ -11,6 +11,7 @@ import Kontaka from './components/Kontaka';
 import FastingApp from './components/MyProject/FastingApp';
 import FlixTrackr from './components/MyProject/Flixtrackr';
 import Fakeflix from './components/MyProject/Fakeflix';
+import Journalkollen from './components/MyProject/Journalkollen';
 /* eslint-disable react/no-unescaped-entities */
 
 
@@ -43,6 +44,7 @@ const HomePage: React.FC = () => {
     <FastingApp isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <FlixTrackr isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <Fakeflix isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+    <Journalkollen isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
 
 
     <Kontaka isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
