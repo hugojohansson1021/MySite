@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import withWebhook from './withWebhook'; // Importera HOC
-
+/* eslint-disable react/no-unescaped-entities */
 const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
 
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
