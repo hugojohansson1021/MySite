@@ -229,6 +229,19 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
   </motion.a>
 </div>
 
+<div className="mt-6">
+  <motion.a
+    href="https://www.flixtrackr.com/"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    viewport={{ once: true }}
+    className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+  >
+    <span className="text-center">{isSwedish ? 'Website' : 'Website'}</span>
+  </motion.a>
+</div>
+
 
 
 

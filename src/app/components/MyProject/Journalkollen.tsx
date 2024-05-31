@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 /* eslint-disable react/no-unescaped-entities */
 
-const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
+const Journalkollen: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
     
     const images = [
         { src: "Journalkollen.png", alt: "Profil img 1" },
@@ -35,7 +35,7 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
            viewport={{ once: true }}
            className=  "text-3xl text-center font-bold mb-3 bg-gradient-to-r from-emerald-500 to-white bg-clip-text text-transparent  "
             >
-            {isSwedish ? 'Flixtrackr.com' : 'Flixtrackr.com'}
+            {isSwedish ? 'Journalkollen.se' : 'Journalkollen.se'}
             </motion.h2>
         
 
@@ -168,6 +168,19 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
   </motion.a>
 </div>
 
+<div className="mt-6">
+  <motion.a
+    href="https://www.journalkollen.se/"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    viewport={{ once: true }}
+    className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+  >
+    <span className="text-center">{isSwedish ? 'Website' : 'Website'}</span>
+  </motion.a>
+</div>
+
 
 
 
@@ -190,4 +203,4 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
   );
 };
 
-export default FlixTrackr;
+export default Journalkollen;
