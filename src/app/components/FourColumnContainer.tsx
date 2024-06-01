@@ -15,8 +15,8 @@ const ThreeColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
       description3: 'Experience in optimizing SEO, Google Vitals, and keyword algorithms',
       title4: 'Bi Development',
       description4: 'Experience in integrating databases to Power bi, building dashboards and writing DAX functions',
-      title5: 'Ai automation',
-      description5: 'Experience building own integrations/applications with APIs such as open ai and building ai automation flows with tools such as MAKE and zapier',
+      title5: 'Agile working methods',
+      description5: 'I have experience working agile within a team with daily standups and weekly briefings',
       
     },
     sv: {
@@ -29,8 +29,8 @@ const ThreeColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
       description3: 'Erfarenhet av optimering av SEO, Google Vitals, och sökords algoritmer',
       title4: 'Bi Utveckling',
       description4: 'Erfarenhet av att integrera Databaser till Power bi, bygga dashboards och skriva DAX funktioner',
-      title5: 'Ai automatisering',
-      description5: 'Erfarenhet av att bygga egna integrationer/applikationer med Api:er som open ai och bygga ai automateserings flöden med verktyg som MAKE och zapier',
+      title5: 'Agila arbetsmetoder',
+      description5: 'Jag har erfarenhet av att arbeta agilt inom ett team med dagliga standups och weekly briefings',
     },
   };
 
