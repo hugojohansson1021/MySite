@@ -1,7 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import withWebhook from '../Webhook';
 /* eslint-disable react/no-unescaped-entities */
+
+
+const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
 
 const Journalkollen: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
     
@@ -132,13 +136,14 @@ const Journalkollen: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch
 
 
             <div className="mt-6 ">
-  <motion.a
+  <MotionLinkWithWebhook
     href={`https://github.com/carlhugojohansson`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
     className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center relative"
+    message="Någon har tryckt på Journalkollen Repo"
   >
     <svg
       className="mr-2 w-4 h-4"
@@ -165,20 +170,21 @@ const Journalkollen: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch
         clipRule="evenodd"
       />
     </svg>
-  </motion.a>
+  </MotionLinkWithWebhook>
 </div>
 
 <div className="mt-6">
-  <motion.a
+<MotionLinkWithWebhook
     href="https://www.journalkollen.se/"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
     className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+    message="Någon har tryckt på Journalkollen website"
   >
-    <span className="text-center">{isSwedish ? 'Website' : 'Website'}</span>
-  </motion.a>
+    <span className="text-center">{isSwedish ? 'WebbApp' : 'WebbApp'}</span>
+    </MotionLinkWithWebhook>
 </div>
 
 

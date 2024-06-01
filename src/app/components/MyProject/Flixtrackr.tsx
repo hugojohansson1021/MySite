@@ -1,7 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import withWebhook from '../Webhook';
 /* eslint-disable react/no-unescaped-entities */
+
+const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
+
 
 const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
     
@@ -198,7 +202,7 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
         clipRule="evenodd"
       />
     </svg>
-    <span className="text-center">{isSwedish ? '≈ 4500 Användare' : '≈ 4500 Users'}</span>
+    <span className="text-center">{isSwedish ? '≈ 5000 Användare' : '≈ 5000 Users'}</span>
   </motion.a>
 </div>
 
@@ -230,16 +234,17 @@ const FlixTrackr: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Re
 </div>
 
 <div className="mt-6">
-  <motion.a
+<MotionLinkWithWebhook
     href="https://www.flixtrackr.com/"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
     className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+    message="Någon har tryckt på Flixtrackr Webbsidan Knappen"
   >
-    <span className="text-center">{isSwedish ? 'Website' : 'Website'}</span>
-  </motion.a>
+    <span className="text-center">{isSwedish ? 'WebbApp' : 'WebbApp'}</span>
+    </MotionLinkWithWebhook>
 </div>
 
 

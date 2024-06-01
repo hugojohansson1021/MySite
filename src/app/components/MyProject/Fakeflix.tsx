@@ -1,10 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import withWebhook from '../Webhook';
 /* eslint-disable react/no-unescaped-entities */
 
 const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
-    
+  
+const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
+
 
 
     const images = [
@@ -103,13 +106,15 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
 
             <div className="mt-6 ">
                 
-  <motion.a
+  <MotionLinkWithWebhook
     href={`https://github.com/hugojohansson1021/STI_AndroidUTV_ProjektARB`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
     className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+    message="Någon har tryckt på FakeFlix Github repot"
+  
   >
     <svg
       className="mr-2 w-4 h-4"
@@ -124,7 +129,7 @@ const Fakeflix: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Reac
       />
     </svg>
     <span className="text-center">{isSwedish ? 'Github' : 'Github'}</span>
-  </motion.a>
+  </MotionLinkWithWebhook>
   
 </div>
 
