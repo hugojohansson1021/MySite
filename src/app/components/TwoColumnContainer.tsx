@@ -1,7 +1,8 @@
 // ThreeColumnContainer.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import withWebhook from './withWebhook';
+import withWebhook from './Webhook';
+
 
 /* eslint-disable react/no-unescaped-entities */
 
