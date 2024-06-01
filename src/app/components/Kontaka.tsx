@@ -1,7 +1,8 @@
 // InformationContainer.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import withWebhook from './withWebhook'; // Importera HOC
+import withWebhook from './Webhook';
+
 /* eslint-disable react/no-unescaped-entities */
 const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
 
