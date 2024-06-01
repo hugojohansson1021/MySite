@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { FormEvent, useRef, useState } from 'react';
 
 /* eslint-disable react/no-unescaped-entities */
 
@@ -26,12 +26,16 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
 
   const sendToWebhook = async (message: string) => {
     try {
+      const payload = {
+        content: `Chatbotten: ${message}`
+      };
+
       await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ content: message }),
+        body: JSON.stringify(payload),
       });
     } catch (error) {
       console.error('Ett fel inträffade vid sändning till webhook:', error);
@@ -125,3 +129,4 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
 };
 
 export default Chatbot;
+
