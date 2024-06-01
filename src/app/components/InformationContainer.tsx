@@ -1,7 +1,9 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
+import withWebhook from './withWebhook';
 /* eslint-disable react/no-unescaped-entities */
+const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
 
 const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const textConfig = {
@@ -45,19 +47,21 @@ const InformationContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
             </motion.h3>
           
           
-            <motion.a
+            <MotionLinkWithWebhook
             href="#myprods"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
             className="bg-emerald-500 text-black text-xl py-3 px-6 rounded-full inline-flex justify-center items-center "
+            message="Chatta med min AI har tryckts"
             >
   <span className="text-center">{isSwedish ? 'Fråga min AI' : 'Ask my AI'}</span>
   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
   </svg>
-</motion.a>
+  
+  </MotionLinkWithWebhook>
 
 
 

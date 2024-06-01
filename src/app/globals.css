@@ -281,4 +281,48 @@ color: #333;
   }
 }
 
+.cursive {
+  font-style: italic;
 
+}
+
+
+
+/* Chatbot Typing Animation */
+.dot-typing {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.dot-typing div {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border-radius: 50%;
+  border: 2px solid #e31837; /* Lägg till border */
+  background-color: #e31837; /* Ändra bakgrundsfärg för att visa border */
+  animation: dot-typing 1s infinite ease-in-out both;
+}
+
+.dot-typing div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot-typing div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot-typing div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-typing {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

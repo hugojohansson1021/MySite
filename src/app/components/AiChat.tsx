@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
+
 /* eslint-disable react/no-unescaped-entities */
 
 interface ChatbotProps {
@@ -21,10 +22,29 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
   const [error, setError] = useState<string>('');
   const bottomRef = useRef<HTMLDivElement>(null);
 
+  const webhookUrl = "https://discord.com/api/webhooks/1246173958231818282/0_xmwoG4Q6JMEwXDc03O6rK-gwVUrUpTTEUqmVLgLrp6nOSpBiKdbWFNeZQ-wMr0UNSl";
+
+  const sendToWebhook = async (message: string) => {
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ content: message }),
+      });
+    } catch (error) {
+      console.error('Ett fel inträffade vid sändning till webhook:', error);
+    }
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
     setError('');
+
+    // Skicka frågan till webhooken
+    await sendToWebhook(question);
 
     setMessages(prevMessages => [...prevMessages, { type: 'question', text: question }]);
 
@@ -52,10 +72,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
     }
   };
 
-  
-
   return (
-    
     <div style={{ fontFamily: 'Arial, sans-serif', width: '89vw', maxWidth: '500px', margin: 'auto', border: '1px solid #000000', borderRadius: '10px', overflow: 'hidden' }}>
       <div style={{ padding: '10px', backgroundColor: '#76FFBF', borderBottom: '1px solid #ddd', textAlign: 'center' }}>
         <h1 style={{ alignSelf: 'center', color: 'black' }}>{botName}</h1>
@@ -84,7 +101,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
         <div ref={bottomRef} />
         {isLoading && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
-            <div className="dot-flashing">
+            <div className="dot-typing">
               <div></div>
               <div></div>
               <div></div>
@@ -93,11 +110,15 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
         )}
         {error && <p style={{ color: 'red', alignSelf: 'center' }}>{error}</p>}
       </div>
+      <div className='text-gray-500 bg-white cursive text-center text-sm'> Svaret kan ta några sekunder  </div>
       <form onSubmit={handleSubmit} style={{ display: 'flex', borderTop: '1px solid #000', padding: '10px', backgroundColor: '#f5f5f5', color: '#666' }}>
         <input type="text" value={question} onChange={(e) => setQuestion(e.target.value)} placeholder="Skriv din fråga här" disabled={isLoading} style={{ flexGrow: 1, padding: '10px', marginRight: '10px', border: '1px solid #000000', borderRadius: '10px', fontSize: '16px' }} />
+        
         <button type="submit" disabled={isLoading} style={{ padding: '10px 15px', fontSize: '16px', cursor: 'pointer', border: 'none', backgroundColor: '#76FFBF', color: 'black', borderRadius: '10px' }}>
           Sök
         </button>
+
+        
       </form>
     </div>
   );

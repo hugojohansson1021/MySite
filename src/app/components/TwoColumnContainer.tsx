@@ -1,7 +1,12 @@
 // ThreeColumnContainer.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import withWebhook from './withWebhook';
+
 /* eslint-disable react/no-unescaped-entities */
+
+const MotionLinkWithWebhook = withWebhook(motion.a); // Skapa en wrapped komponent
+
 
 const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isSwedish, setIsSwedish }) => {
   const textConfig = {
@@ -62,13 +67,14 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
 
   
 <div className="mt-6 items-center justify-center text-center">
-  <motion.a
+<MotionLinkWithWebhook
     href="#fastigapp"
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 0.4 }}
     viewport={{ once: true }}
     className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center items-center"
+    message="Någon har tryckt på 'se alla projekt'"
   >
     <svg
       className="mr-2 w-4 h-4"
@@ -79,7 +85,7 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
     </svg>
     <span className="text-center">{isSwedish ? 'Se all projekt' : 'View all projects'}</span>
-  </motion.a>
+    </MotionLinkWithWebhook>
 </div>
             </motion.div>
             </div>
@@ -99,12 +105,18 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
               <p className="text-gray-700 mb-2">
                 {isSwedish ? textConfig.sv.description1 : textConfig.en.description1}
               </p>
-              <a href="https://github.com/hugojohansson1021" className="green-color flex items-center">
+
+
+
+              <MotionLinkWithWebhook
+               href="https://github.com/hugojohansson1021" className="green-color flex items-center" message="Någon har tryckt på github länken ">
                 <span>{isSwedish ? textConfig.sv.arrowlink1 : textConfig.en.arrowlink1}</span>
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-              </a>
+                </MotionLinkWithWebhook>
+
+
             </motion.div>
           </div>
 
@@ -123,10 +135,13 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
               <p className="text-gray-700 mb-2">
                 {isSwedish ? textConfig.sv.description2 : textConfig.en.description2}
               </p>
-              <a
+
+
+              <MotionLinkWithWebhook
   href="/CV.pdf"
   download
   className="bg-emerald-400 text-black text-xl py-1 px-3 rounded-full inline-flex justify-center "
+  message="Någon har laddat ner ditt CV"
 >
   <span>{isSwedish ? textConfig.sv.arrowlink2 : textConfig.en.arrowlink2}</span>
   <svg
@@ -138,7 +153,7 @@ const TwoColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dis
   >
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
   </svg>
-</a>
+  </MotionLinkWithWebhook>
             </motion.div>
           </div>
 
