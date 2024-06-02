@@ -301,8 +301,8 @@ color: #333;
   height: 10px;
   margin: 0 3px;
   border-radius: 50%;
-  border: 2px solid #76FFBF; /* Lägg till border */
-  background-color: #76FFBF; /* Ändra bakgrundsfärg för att visa border */
+  border: 2px solid #000; /* Lägg till border */
+  background-color: #000; /* Ändra bakgrundsfärg för att visa border */
   animation: dot-typing 1s infinite ease-in-out both;
 }
 

@@ -22,7 +22,7 @@ const ThreeColumnContainer: React.FC<{ isSwedish: boolean; setIsSwedish: React.D
     sv: {
       titletitle: 'Mina kompetenser',
       title: 'Fullstack Webbutveckling',
-      description: 'Hybrid applikationsutveckling i system som NEXTjs och vercel men också klassiska tech stacks som MERN ',
+      description: 'Hybrid applikationsutveckling i system som NEXT.js och vercel men också klassiska tech stacks som MERN ',
       title2: 'IOS utveckling',
       description2: 'Fokus på Swiftui men också kunskap inom UIkit storyboard, med erfarenhet av API:er MVVM och databaser som FireBase',
       title3: 'SEO',

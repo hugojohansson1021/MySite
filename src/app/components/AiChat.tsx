@@ -66,7 +66,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
       }
 
       const data = await res.json();
-      setMessages(prevMessages => [...prevMessages, { type: 'response', text: data.response }]);
+      
+      // Ta bort referenserna från svaret
+      const cleanedResponse = data.response.replace(/【\d+:\d+†source】/g, '');
+
+      setMessages(prevMessages => [...prevMessages, { type: 'response', text: cleanedResponse }]);
     } catch (err) {
       console.error('Ett fel inträffade:', err);
       setError('Ett fel inträffade vid hämtning av svaret.');
@@ -129,4 +133,5 @@ const Chatbot: React.FC<ChatbotProps> = ({ apiEndpoint, botName = 'HugoAI assist
 };
 
 export default Chatbot;
+
 

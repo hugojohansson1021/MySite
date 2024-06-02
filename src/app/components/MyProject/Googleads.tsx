@@ -9,10 +9,8 @@ const Googleads: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Rea
 
     const images = [
         { src: "Keyword_algo.png", alt: "Profil img 1" },
-        { src: "Keyword_sheet_1.png", alt: "Profil img 2" },
-        { src: "Keyword_sheet_2.png", alt: "Profil img 3" },
-        { src: "Flixtrackr_SEO_ranks.PNG", alt: "Profil img 4" },
-        { src: "SEO_score.png", alt: "Profil img 5" },
+        { src: "Flixtrackr_SEO_ranks.PNG", alt: "Profil img 2" },
+        { src: "SEO_score.png", alt: "Profil img 3" },
       ];
     
       const [activeIndex, setActiveIndex] = useState(0);
@@ -59,7 +57,7 @@ const Googleads: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<Rea
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.8 }}
     transition={{ duration: 0.6 }}
-    className="w-full h-fit  rounded-3xl shadow-lg"
+    className="w-full h-[500px]  rounded-3xl shadow-lg"
   />
 </div>
 
