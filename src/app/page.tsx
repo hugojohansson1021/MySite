@@ -41,11 +41,11 @@ const HomePage: React.FC = () => {
     <KontaktaMig isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
 
     
-
+    <Journalkollen isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <FastingApp isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <FlixTrackr isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
     <Fakeflix isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
-    <Journalkollen isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
+    
     <Googleads isSwedish={isSwedish} setIsSwedish={setIsSwedish}/>
 
 

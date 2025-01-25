@@ -104,7 +104,7 @@ const Navbar: React.FC<{ isSwedish: boolean; setIsSwedish: React.Dispatch<React.
 
             {/* Toggle switch */}
             <div className="flex items-center space-x-2 mt-4 md:mt-0 ">
-              <span className={`text-white blur-none ${isSwedish ? 'font-bold blur-none green-color' : ''}`}>SV</span>
+              <span className={`text-white blur-none ${isSwedish ? 'font-bold blur-none green-color' : ''}`}>SE</span>
               <label className="inline-flex relative items-center cursor-pointer">
                 <input
                   type="checkbox"
